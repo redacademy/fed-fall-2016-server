@@ -32,6 +32,13 @@
         "api",
         "mongoose"
     ],
+    "dependencies": {
+        "bcryptjs": "^2.3.0",
+        "colors": "^1.1.2",
+        "cors": "^2.8.1",
+        "express": "^4.14.0",
+        "mongoose": "^4.7.0"
+    },
     "devDependencies": {
         "babel-eslint": "^7.1.1",
         "eslint": "^3.11.0",
