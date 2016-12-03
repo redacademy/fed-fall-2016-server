@@ -1,0 +1,35 @@
+{
+    "name": "fed-fall-2016-server",
+    "version": "1.0.0",
+    "description": "a server for changed-and-fed's authentication and data persistence",
+    "author": "Scott Clayton",
+    "contributors": [
+        {
+            "name": "Scott Clayton",
+            "url": "https://github.com/scottclayton"
+        },
+        {
+            "name": "Brandon Fajardo",
+            "url": "https://github.com/brandonfajardo"
+        },
+        {
+            "name": "Fergus MacConnell",
+            "url": "https://github.com/fergmac/"
+        },
+        {
+            "name": "Tracey Sum",
+            "url": "https://github.com/githubtracey"
+        }
+    ],
+    "license": "ISC",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "node",
+        "express",
+        "api",
+        "mongoose"
+    ]
+}
