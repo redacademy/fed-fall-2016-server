@@ -31,5 +31,32 @@
         "express",
         "api",
         "mongoose"
-    ]
+    ],
+    "devDependencies": {
+        "babel-eslint": "^7.1.1",
+        "eslint": "^3.11.0",
+        "eslint-config-airbnb": "13.0.0",
+        "eslint-plugin-import": "2.2.0",
+        "eslint-plugin-jsx-a11y": "2.2.3",
+        "eslint-plugin-react": "6.7.1"
+    },
+    "eslintConfig": {
+        "parser": "babel-eslint",
+        "extends": "airbnb",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "rules": {
+            "comma-dangle": 2,
+            "arrow-parens": 0,
+            "no-console": 0,
+            "no-multi-str": 0,
+            "no-underscore-dangle": 0,
+            "prefer-template": 0,
+            "semi": [
+                2,
+                "never"
+            ]
+        }
+    }
 }
