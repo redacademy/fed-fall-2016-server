@@ -1,4 +1,6 @@
 npm-debug.log
 node_modules
 .DS_Store
+
+# for storing things like API keys and APP_SECRETS
 private
