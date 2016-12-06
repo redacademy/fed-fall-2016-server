@@ -16,7 +16,9 @@ app.use(express.static(resolve(process.cwd(), 'public')))
 app.use(cors({ origin: ['http://localhost:3000'], credentials: true })) // for testing from development computer
 app.use(router)
 
-require('./test-endpoint')(router)
+
+require('./api-routes/location')(router)
+require('./api-routes/location-listview')(router)
 
 
 app.use((req, res, next) => {
