@@ -3,12 +3,14 @@ const resolve = require('path').resolve
 const cors = require('cors')
 const colors = require('colors')
 const getPackageVersion = require('./functions').getPackageVersion
+const mongooseDb = require('./database/')
 
 const port = 3030
 
 const app = express()
 const router = express.Router({ mergeParams: true })
 
+mongooseDb()                   // connect to Mongo database
 
 app.use(express.static(resolve(process.cwd(), 'public')))
 app.use(cors({ origin: ['http://localhost:3000'], credentials: true })) // for testing from development computer
