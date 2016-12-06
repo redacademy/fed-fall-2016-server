@@ -5,7 +5,7 @@ const colors = require('colors')
 const getPackageVersion = require('./functions').getPackageVersion
 const mongooseDb = require('./database/')
 
-const port = 3030
+const port = 80
 
 const app = express()
 const router = express.Router({ mergeParams: true })
