@@ -16,6 +16,8 @@ app.use(express.static(resolve(process.cwd(), 'public')))
 app.use(cors({ origin: ['http://localhost:3000'], credentials: true })) // for testing from development computer
 app.use(router)
 
+require('./test-endpoint')(router)
+
 
 app.use((req, res, next) => {
   res.status(404).send('Route not jelly :(')
