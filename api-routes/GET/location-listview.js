@@ -11,8 +11,7 @@ function ApiRoutes(router) {
       'ChIJFfDeDsdzhlQRqU3zGHTmMuk',
       'ChIJVTbKnMdzhlQR2eJyHFphPec',
       'ChIJk5Qv1cdzhlQRC9m9Hes_il8',
-    ]
-))
+    ]))
 }
 
 module.exports = ApiRoutes
