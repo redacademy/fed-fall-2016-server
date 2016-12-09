@@ -4,11 +4,13 @@ const cors = require('cors')
 const colors = require('colors')
 const getPackageVersion = require('./functions').getPackageVersion
 const mongooseDb = require('./database/')
+const bodyParser = require('body-parser')
 
 const port = 80
 
 const app = express()
 const router = express.Router({ mergeParams: true })
+router.use(bodyParser.json())
 
 mongooseDb()                   // connect to Mongo database
 
@@ -25,7 +27,7 @@ require('./api-routes/GET/location-listview')(router)
 /*
  * POST ROUTES
  */
-require('./api-routes/POST/new-location')(router)
+require('./api-routes/POST/location-new')(router)
 
 
 app.use((req, res, next) => {
