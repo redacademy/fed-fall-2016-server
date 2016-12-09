@@ -9,7 +9,7 @@ const Location = require('../database/models/location')
 // If you would like to use something like this, you will need to input
 // your own mongo conenction string information in the variable below. You could also
 // use process.env variables (environment variables)
-const MONGO_CONNECTION_STRING = require('../private/mongo-config')         // something like "mongodb://user-goes-here:password-goes-here@localhost:27017/database-goes-here"
+const MONGO_CONNECTION_STRING = require('../private/mongoConfig')         // something like "mongodb://user-goes-here:password-goes-here@localhost:27017/database-goes-here"
 
 
 // Startup sequence for MongoDB. It will check the locations collection

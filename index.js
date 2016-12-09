@@ -22,12 +22,12 @@ app.use(router)
  * GET ROUTES
  */
 require('./api-routes/GET/location')(router)
-require('./api-routes/GET/location-listview')(router)
+require('./api-routes/GET/locationListview')(router)
 
 /*
  * POST ROUTES
  */
-require('./api-routes/POST/location-new')(router)
+require('./api-routes/POST/locationNew')(router)
 
 
 app.use((req, res, next) => {
