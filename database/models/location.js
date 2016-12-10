@@ -1,22 +1,9 @@
 /* eslint-disable max-len */
 const mongoose = require('mongoose')
 
-/**
- * !!!  IMPORTANT NOTE  !!!
- *
- * you will need to create an index on the locations collection, like so
- * db.locations.createIndex( { "loc": "2dsphere" } )
- *
- * remember that Mongoose will automatically pluralize location to locations, with an 's'
- *
- */
-
 const LocationSchema = new mongoose.Schema({
   placeId: { type: String, unique: true, required: false },
-  loc: {
-    lng: { type: String, unique: false, required: true },
-    lat: { type: String, unique: false, required: true },
-  },
+  loc: { type: [Number], index: '2dsphere', required: true },
   ratingSummary: {
     totalRaters: { type: Number, required: true },
     quality: { type: Number, required: true },
