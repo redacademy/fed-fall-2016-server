@@ -29,6 +29,7 @@ require('./api-routes/GET/locationNear')(router)
  * POST ROUTES
  */
 require('./api-routes/POST/locationNew')(router)
+require('./api-routes/POST/locationRatingAdd')(router)
 
 
 app.use((req, res, next) => {
