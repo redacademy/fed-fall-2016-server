@@ -8,30 +8,30 @@ const UserSchema = new mongoose.Schema({
   username: {
     type: String,
     unique: true,
-    required: true,
+    required: true
   },
   firstName: {
     type: String,
     unique: false,
-    required: false,
+    required: false
   },
   lastName: {
     type: String,
     unique: false,
-    required: false,
+    required: false
   },
   email: {
     type: String,
     lowercase: true,
     unique: true,
-    required: true,
+    required: true
   },
   password: {
     type: String,
-    required: true,
+    required: true
   },
   faves: [],
-  reviewed: [],
+  reviewed: []
 })
 
 UserSchema.methods.checkPassword = function (password, cb) {

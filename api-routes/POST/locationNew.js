@@ -14,7 +14,7 @@ function ApiRoutes(router) {
           quality: rating.quality,
           clean: rating.clean,
           nursing: rating.nursing,
-          quiet: rating.quiet,
+          quiet: rating.quiet
         },
         createdBy,
         mapPin,
@@ -26,11 +26,9 @@ function ApiRoutes(router) {
           quality: rating.quality,
           clean: rating.clean,
           nursing: rating.nursing,
-          quiet: rating.quiet,
-        },
+          quiet: rating.quiet
+        }
       })
-
-    console.log('I MADE IT!!!!')
     res.status(200).send('I LOVE YOU')
   })
 }

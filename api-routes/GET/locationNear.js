@@ -2,7 +2,6 @@ const Location = require('../../database/models/location')
 
 function ApiRoutes(router) {
   router.get('/api/location/near/:lng/:lat', (req, res) => {
-    console.log(req.params)
     Location.geoNear(
       {
         type: 'Point',
@@ -12,8 +11,11 @@ function ApiRoutes(router) {
         distanceField: 'dist.calculated',
         includeLocs: 'dist.location',
         num: 10,
-        spherical: true,
+        spherical: true
       }, (err, locations) => {
+        // TODO - refactor mongoose query to omit rating array and just return
+        // the ratingSummary nested document instead
+        console.log(err)
         res.status(200).json(locations)
       })
   })

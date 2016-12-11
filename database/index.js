@@ -29,9 +29,8 @@ module.exports = function connectDb() {
             '   -   via Mongoose',
             getPackageVersion('mongoose'))))
       Location.count({}, (err, count) => {
-        console.log('before the ifs')
         if (!count) {
-          console.log('none found, so I should insert')
+          console.log('Database empty, so I should insert')
           Location.collection.insert(dummyData[0])
           Location.collection.insert(dummyData[1])
           Location.collection.insert(dummyData[2])
@@ -43,8 +42,6 @@ module.exports = function connectDb() {
           Location.collection.insert(dummyData[8])
           Location.collection.insert(dummyData[9])
           console.log('I should have inserted')
-        } else {
-          console.log('apparently I found something')
         }
       })
       return connection

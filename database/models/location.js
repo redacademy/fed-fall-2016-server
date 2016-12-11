@@ -9,14 +9,14 @@ const LocationSchema = new mongoose.Schema({
     quality: { type: Number, required: true },
     clean: { type: Number, required: true },
     nursing: { type: Number, required: true },
-    quiet: { type: Number, required: true },
+    quiet: { type: Number, required: true }
   },
   rating: [{
     userId: { type: String, unique: true, required: true },
     quality: { type: Number, min: 1, max: 3, required: true },
     clean: { type: Number, min: 1, max: 3, required: true },
     nursing: { type: Number, min: 1, max: 3, required: true },
-    quiet: { type: Number, min: 1, max: 3, required: true },
+    quiet: { type: Number, min: 1, max: 3, required: true }
   }],
   createdBy: { type: String, required: true, unique: false },
   createdAt: { type: Date, unique: false, required: true },
@@ -29,8 +29,8 @@ const LocationSchema = new mongoose.Schema({
     strollerAccessible: { type: Boolean, default: false },
     washroomMen: { type: Boolean, default: false },
     washroomFamily: { type: Boolean, default: false },
-    washroomWomen: { type: Boolean, default: false },
-  },
+    washroomWomen: { type: Boolean, default: false }
+  }
 })
 
 const Location = mongoose.model('Location', LocationSchema)
