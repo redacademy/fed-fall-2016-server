@@ -9,13 +9,18 @@ function ApiRoutes(router) {
       },
       {
         distanceField: 'dist.calculated',
-        includeLocs: 'dist.location',
         num: 10,
         spherical: true
-      }, (err, locations) => {
-        // TODO - refactor mongoose query to omit rating array and just return
-        // the ratingSummary nested document instead
-        console.log(err)
+      },
+      (err, locations) => {
+        // TODO - refactor mongoose query to omit 'rating' array
+        // unfortunately, geoNear doesn't permit the manual inclusion/exclusion
+        // of fields, so might need to use $near, which might necessitate
+        // changing the type of index on the 'loc' field
+        if (err) {
+          console.log(err)
+        }
+
         res.status(200).json(locations)
       })
   })
