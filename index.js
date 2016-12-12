@@ -24,6 +24,7 @@ app.use(router)
 require('./api-routes/GET/location')(router)
 require('./api-routes/GET/locationListview')(router)
 require('./api-routes/GET/locationNear')(router)
+require('./api-routes/GET/locationNearBetter')(router)
 
 /*
  * POST ROUTES
