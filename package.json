@@ -1,35 +1,72 @@
 {
-    "name": "fed-fall-2016-server",
-    "version": "1.0.0",
-    "description": "a server for changed-and-fed's authentication and data persistence",
-    "author": "Scott Clayton",
-    "contributors": [
-        {
-            "name": "Scott Clayton",
-            "url": "https://github.com/scottclayton"
-        },
-        {
-            "name": "Brandon Fajardo",
-            "url": "https://github.com/brandonfajardo"
-        },
-        {
-            "name": "Fergus MacConnell",
-            "url": "https://github.com/fergmac/"
-        },
-        {
-            "name": "Tracey Sum",
-            "url": "https://github.com/githubtracey"
-        }
-    ],
-    "license": "ISC",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "fed-fall-2016-server",
+  "version": "1.0.0",
+  "description": "a server for changed-and-fed's authentication and data persistence",
+  "author": "Scott Clayton",
+  "contributors": [
+    {
+      "name": "Scott Clayton",
+      "url": "https://github.com/scottclayton"
     },
-    "keywords": [
-        "node",
-        "express",
-        "api",
-        "mongoose"
-    ]
+    {
+      "name": "Brandon Fajardo",
+      "url": "https://github.com/brandonfajardo"
+    },
+    {
+      "name": "Fergus MacConnell",
+      "url": "https://github.com/fergmac/"
+    },
+    {
+      "name": "Tracey Sum",
+      "url": "https://github.com/githubtracey"
+    }
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development pm2 start index.js --watch",
+    "startnodemon": "NODE_ENV=development nodemon --debug --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "api",
+    "mongoose"
+  ],
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "colors": "^1.1.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.11.0",
+    "eslint-config-airbnb": "13.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.7.1"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "rules": {
+      "comma-dangle": [2, "never"],
+      "arrow-parens": 0,
+      "no-console": 0,
+      "no-multi-str": 0,
+      "no-underscore-dangle": 0,
+      "prefer-template": 0,
+      "semi": [
+        2,
+        "never"
+      ]
+    }
+  }
 }
